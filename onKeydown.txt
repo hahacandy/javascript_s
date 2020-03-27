@@ -1,0 +1,3 @@
+form에서 사용
+
+onKeydown="javascript:if(event.keyCode == 13) form.submit();"
