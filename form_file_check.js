@@ -16,6 +16,21 @@ function checkFileType(form_file) {
 	}
 }
 
+//파일 하나의 확장자명만 허용
+function checkOneFileType(form_file, _filetype) {
+	var pathpoint = form_file.value.lastIndexOf('.');
+	filepoint = form_file.value.substring(pathpoint+1, form_file.value.length);
+	filetype = filepoint.toLowerCase();
+	
+	if(_filetype.indexOf(filetype) == -1){ //check_file_type에 존재하지 않는 확장자 명이면 업로드 불가
+		form_file.value="";
+		alert(filetype+" 확장자명은 업로드 불가!");
+		return false;
+	}else{
+		return true;
+	}
+}
+
 //파일 용량 체크 (form_file = frm.obj, _maxsize = 1~(MB))
 function checkFileSize(form_file, _maxsize) {
 	var fileSize = form_file.files[0].size;
