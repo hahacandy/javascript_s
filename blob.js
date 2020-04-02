@@ -31,9 +31,11 @@ MP4Box -dash 5000 -frag 5000 -rap "동영상이름.mp4"
 				console.log(mediaSource);
 				if (!sourceBuffer.updating && mediaSource.readyState === 'open') {
 					mediaSource.endOfStream();
+					video.play();
+					console.log(mediaSource.readyState); // ended   
 				  }
-				video.play();
-				console.log(mediaSource.readyState); // ended    
+				
+				 
 			});
 			sourceBuffer.appendBuffer(buf);
 		});
