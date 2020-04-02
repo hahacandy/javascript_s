@@ -1,4 +1,6 @@
 //사용하기 위해서는 mp4파일을 frag(조각) 해주어야함
+MP4Box -dash 5000 -frag 5000 -rap "동영상이름.mp4"
+
 	<script>
 	
 		var myVideo = document.getElementById("ani_view");
