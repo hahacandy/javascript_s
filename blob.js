@@ -34,3 +34,17 @@
 	xhr.open('GET', 'http://localhost:8090/upload/128.mp4');
 	xhr.send();
 </script>
+
+
+//이미지인데 이건 아직 안써봄
+<script>
+fetch('이미지 url', {
+})
+.then((response) => response.blob())
+.then((blob) => {
+    const imageUrl = URL.createObjectURL(blob);
+    const img = document.querySelector('img');
+    img.addEventListener('load', () => URL.revokeObjectURL(imageUrl));
+    document.getElementById('i1').src = imageUrl;
+});
+</script>
