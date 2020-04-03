@@ -4,7 +4,7 @@ MP4Box -dash 5000 -frag 5000 -rap "동영상이름.mp4"
 <script type="text/javascript">
 
 
-	var video = document.getElementById("ani_view_src");
+	var video = document.getElementById("video 태그 ");
 
 	var assetURL = '동영상주소.mp4';
 	// Need to be specific for Blink regarding codecs 
