@@ -1,5 +1,5 @@
-var formData = $("form[name=frm]").serialize();
-		
+//폼형식 전달
+var formData = $("form[name=frm]").serialize();	
 $.ajax({
 	url:'Member?command=signupcheck',
 	type:'post',
@@ -19,3 +19,16 @@ $.ajax({
 	}
 
 });
+
+
+//문자열식 전달
+$.ajax({
+	url: '/member/memberAction.asp',
+	type: 'post', //post,get,등..전송방식
+	dataType: 'text',//데이타 타입
+	data: { mode : "login", code : code, uid : uid, pass : pass },
+	success: function(data){
+	}
+});
+
+
