@@ -1,4 +1,4 @@
-        //해당 하는 id의 엘리멘탈을 클릭했을때 드래그 한 text를 리턴함
+        //해당 하는 id의 엘리멘탈을 드래그했을때 드래그 한 text를 리턴함
     	var temp_select_text = "";
 	    function getSelectedNode(element_id)
 	    {
