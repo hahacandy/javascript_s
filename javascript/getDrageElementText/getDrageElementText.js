@@ -28,7 +28,7 @@
 		}
     
         document.onmouseup = function() {
-	       	var select_element_text = getSelectedNode("엘");
+	       	var select_element_text = getSelectedNode("element id!!!");
 			if(select_element_text != null){
 				alert(select_element_text);
 			}
