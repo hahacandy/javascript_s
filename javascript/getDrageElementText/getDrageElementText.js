@@ -17,13 +17,15 @@
 	        }
 	        select_text = select_text.toString();
 	
-	        select_element_id = select_element.getAttribute('id');
-	        if(select_text.toString().length > 0 && temp_select_text != select_text && select_element.textContent.includes(select_text) && select_element_id == element_id){
-	      	  temp_select_text = select_text;
-	      	  return select_text;
-	        }else{
-	      	  return;
-	        }
+	        try {
+	        	select_element_id = select_element.getAttribute('id');
+		        if(select_text.toString().length > 0 && temp_select_text != select_text && select_element.textContent.includes(select_text) && select_element_id == element_id){
+		      	  temp_select_text = select_text;
+		      	  return select_text;
+		        }
+			} catch (e) {}
+	        
+	      	 return;
 	        
 		}
     
